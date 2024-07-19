@@ -1,12 +1,11 @@
 from pathlib import Path
-import cv2
 
 
 """Parameter used to scale down the size of input image to make it eaier to detect larger faces. Example: 1.1 reduces image 10%."""
 scaleFactorValue = 1.1
 
 """Parameter used to specify the number of neighboring rectangles that need to be identified for detection."""
-minNeighborsValue =  5
+minNeighborsValue = 5
 
 """Parameter that sets the minimum size of the object being detected."""
 minSizeValue = (200, 200)
@@ -16,9 +15,6 @@ bbBoxColor = (0, 250, 0)
 
 """Thickness of the bounding box."""
 bbThickness = 4
-
-"""Variable to store the original image path."""
-primaryDir = 'og_images/'
 
 """Parameter for default image height."""
 defaultHeight = 3456
@@ -33,16 +29,13 @@ resizeHeight = 512
 resizeWidth = 512
 
 """Variable to find filepath."""
-filepath = Path('image_cropper.py').parent.absolute()
-
-"""Directroy for original images."""
-og_image_dir = str(filepath.joinpath(filepath) / 'images' / 'og_images')
+filepath = Path('titlewv.tff').parent.absolute()
 
 """Directroy for cropped images."""
 temp_dir = str(filepath.joinpath(filepath) / 'images'/ 'temp')
 
 """Directory for finsihed images."""
-resized_image_dir = str(filepath.joinpath(filepath) / 'images'/ 'resized_images')
+resized_image_dir = str(filepath.joinpath(filepath) / 'images' / 'resized_images')
 
 """Variable for logo image directory."""
 logo = 'images/assets/huntingdon_logo.png'
@@ -61,9 +54,3 @@ hunt_white = '#ffffff'
 
 """Variable for font."""
 custom_font = 'Title Wave'
-#
-# """Variable for font location."""
-# font_path = str(filepath.joinpath(filepath) / 'images '/ 'assets'/ stored_font)
-#
-# """Variable for custom font."""
-# custom_font = FontProperties(fname=font_path)
